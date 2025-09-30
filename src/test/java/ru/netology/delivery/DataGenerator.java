@@ -1,6 +1,8 @@
 package ru.netology.delivery;
 
 import com.github.javafaker.Faker;
+import io.qameta.allure.Allure;
+import io.qameta.allure.Step;
 import lombok.Value;
 
 import java.time.LocalDate;
@@ -38,13 +40,13 @@ public class DataGenerator {
         private Registration() {
         }
 
+        @Step
         public static UserInfo generateUser(String locale) {
             faker = new Faker(new Locale(locale));
             UserInfo user = new UserInfo(generateCity(),
                     generateName(faker), generatePhone(faker));
             return user;
         }
-
     }
 
     @Value
