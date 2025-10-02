@@ -42,9 +42,9 @@ public class CardDeliveryTest {
         var daysToAddForSecondMeeting = 7;
         var secondMeetingDate = DataGenerator.generateDate(daysToAddForSecondMeeting, "dd.MM.yyyy");
 
-        Allure.step("Заполнение полей формы",() ->{
+         Allure.step("Заполнение полей формы",() ->{
             $("[data-test-id='city'] input").setValue(validUser.getCity());
-            Allure.attachment("Город", validUser.getCity().toString());
+           Allure.attachment("Город", validUser.getCity().toString());
             $("[data-test-id='date'] .input__control")
                     .press(Keys.chord(Keys.SHIFT, Keys.HOME), Keys.BACK_SPACE)
                     .setValue(firstMeetingDate);

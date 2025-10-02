@@ -20,7 +20,7 @@ public class DataGenerator {
     }
 
     public static String generateCity() {
-        String[] cities = new String[]{"Горно-Алтайск", "Уфа", "Улан-Удэ", "Махачкала", "Элиста", " Петрозаводск", "Сыктывкар"};
+        String[] cities = new String[]{"Горно-Алтайск", "Уфа", "Улан-Удэ", "Махачкала", "Элиста", " Самара", "Сыктывкар"};
         return cities[new Random().nextInt(cities.length)];
     }
 
@@ -49,10 +49,11 @@ public class DataGenerator {
         }
     }
 
-    @Value
-    public static class UserInfo {
-        String city;
-        String name;
-        String phone;
-    }
+        @Value
+        public static class UserInfo {
+            String city;
+            String name;
+            String phone;
+
+        }
 }
